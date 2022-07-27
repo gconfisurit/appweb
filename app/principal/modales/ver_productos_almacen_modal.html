@@ -1,0 +1,56 @@
+
+
+<!-- MODAL DETALLE DE UN DESPACHO DESPACHO -->
+<div class="modal fade"  id="verDetalleDealmacenModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalle de Almacen <span id="detalle_almacen"></span></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="ver_detalle_almacen" name="ver_detalle_almacen" value="">
+
+                <!-- productos del despacho -->
+                <div class="card-body" style="width:auto;">
+                    <table class="table table-bordered table-striped table-sm  text-center" style="width:100%;" id="tabla_detalle_almacen">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Instancia</th>
+                            <th>Cantidad de Bultos</th>
+                            <th>Cantidad de Paquetes</th>
+                            <th>Valorización de Bultos</th>
+                            <th>Valorización de Paquetes</th>
+                            <th>Valorización Total</th>
+                        </tr>
+                        </thead>
+                        <tfoot style="background-color: #aaa;color: white;">
+                        <tr>
+                            
+                            <th></th>
+                            <th>TOTAL </th>
+                            <th id="total_cantBul_tfoot">Cantidad de Bultos</th>
+                            <th id="total_cantPaq_tfoot">Cantidad de Paquetes</th>
+                            <th id="cantBul_tfoot">Valorización de Bultos</th>
+                            <th id="cantPaq_tfoot">Valorización de Paquetes</th>
+                            <th id="cantValor_tfoot">Valorización Total</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="col-md-12">
+                        <!--<button class="btn btn-primary pull-left" id="exportarDetalleDespacho_pdf"  onclick="" type="button">Exportar a PDF</button>
+                        <button class="btn btn-primary pull-left" id="DetalladoDespacho_pdf" onclick="" type="button">PDF Detallado</button>-->
+                        <button type="button" class="btn btn-danger float-right" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

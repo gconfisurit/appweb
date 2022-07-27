@@ -1,0 +1,50 @@
+
+<!-- MODAL DE EDITAR UNA FACTURA EN DESPACHO -->
+<div class="modal fade"  id="editarFacturaEnDespachoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edicion de Documentos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="alert alert-warning alert-dismissible" id="alert_editar_documento">
+                                <h5 id="text_alert_editar_documento"><i class="icon fas fa-exclamation-triangle"></i> ATENCION! faltan campos por rellenar</h5>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Numero de Documento</label>
+                            <input type="text" class="form-control input-sm" maxlength="20" id="documento_editar" name="documento_editar" placeholder="Ingrese numero de documento">
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" id="tipo_fact_modal_2" name="tipo_doc_modal_2" value="f" checked>
+                                <label for="tipo_fact_modal_2" class="custom-control-label">Factura</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" id="tipo_not_modal_2" name="tipo_doc_modal_2" value="n">
+                                <label for="tipo_not_modal_2" class="custom-control-label">Nota de Entrega</label>
+                            </div>
+                        </div>
+                        <input  type="hidden" id="viejo_documento_editar" name="viejo_documento_editar"  />
+                        <input  type="hidden" id="viejo_tipofac_editar" name="viejo_tipofac_editar"  />
+                        <input  type="hidden" id="correlativo_del_documento_editar" name="correlativo_del_documento_editar"  />
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <button type="button" name="action" class="btn btn-success pull-left" value="" onclick="modalGuardarDocumentoEnDespacho()">Guardar</button>
+                    <button type="button" class="btn btn-danger float-right" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+{
+  "require": {
+    "phpoffice/phpspreadsheet": "^1.11",
+    "phpmailer/phpmailer": "^6.1",
+    "ext-json": "*",
+    "ext-gd": "*",
+    "ext-pdo": "*"
+  }
+}

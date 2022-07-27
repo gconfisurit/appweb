@@ -1,0 +1,52 @@
+PASO 1: EXTRAER EL ZIP SEGUN EL SISTEMA OPERATIVO.
+
+	PARA 32BITS "httpd-2.4.23-win32-VC14"
+	PARA 64BITS "httpd-2.4.23-win64-VC14"
+
+PASO 2: PEGAR LA CARPETA APACHE24 EN EL DISCO C O EN UNA SUBCARPETA DEL DISCO C QUE HALLAN CREADO
+	 
+PASO 3: EDITAR EL ARCHIVO "C:\Apache24\conf\httpd.conf"
+	Y AGREGAR EL SIGUIENTE CODIGO (ESTO ES PARA HABILITAR PHP):
+	
+	AddHandler application/x-httpd-php .php
+	AddType application/x-httpd-php .html .htm
+	LoadModule php5_module "C:/php/php5apache2_4.dll"
+	PHPINIDir "C:/php"
+
+	NOTA: EN PHPINIDir SE DEBE COLOCAR LA RUTA DONDE ESTA INSTALADO PHP.
+
+PASO 4: AHORA AGREGAMOS LO SIGUIENTE PARA QUE NUESTRO SERVIDOR RECONOSCA EL INDEX.PHP COMO ARCHIVO DE INICIO DE LAS PAGINA, TAMBIEN SE AGRGAN OTROS:
+	BUSCAMOS <IfModule dir_module>; lo encontraran asi:
+
+	<IfModule dir_module>
+	    DirectoryIndex index.html
+	</IfModule>
+	
+	COMO VEMOS NOS RECONOCE SOLO COMO ARCHIVO DE INICIO LOS index.html, AGREGAMOS LOS DEMAS.
+	
+	<IfModule dir_module>
+	    DirectoryIndex index.php index.html index.pl index.cgi index.asp index.shtml index.htm \
+                   default.php default.pl default.cgi default.asp default.shtml default.html default.htm \
+                   home.php home.pl home.cgi home.asp home.shtml home.html home.htm
+	</IfModule>
+	
+CAMBIAR EL ServerName y asignar->localhost
+	NOTA: GUARDAR EL ARCHIVO Y CERRAR.
+		
+PASO 5: POR ULTIMO INSTALAREMOS EL SERVICIO DE APACHE
+	COPIAMOS LOS ARCHIVOS "apache_installservice.bat" Y "apache_uninstallservice"
+	LOS PEGAMOS EN LA RAIZ DE APACHE.
+
+	NOTA:YA DEBE DE ESTAR PHP INSTALADO.
+	
+	AHORA EJECUTAMOS "apache_installservice.bat" Y LISTO.
+	PARA DESINSTALAR SE EJECUTA "apache_uninstallservice"
+
+YA CON ESTO QUEDA CONFIGURADO NUESTRO APACHE Y SOLO QUEDA CONFIGURAR PHP.
+
+
+NOTA FINAL:
+DEBEMOS TENER INSTALADO "Visual C++ 2012 Redistributable"
+Y SP1 INSTALADO EN WINDOWS 7, PARA PODER UTILIZAR APACHE VC14.
+
+PRIMERO SE INSTALA SP1, PARA PODER INSTALAR "Visual C++ 2015 Redistributable".

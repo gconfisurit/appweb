@@ -1,0 +1,22 @@
+<?php
+
+# BASES DE DATOS
+/** base de datos del sistema **/
+const SERVER_BD_1 = "localhost";
+const NAME_BD_1 = "appwebaj";
+const USER_BD_1 = "sa";
+const PASSWORD_BD_1 = "";
+
+/** base de datos SAINT **/
+const SERVER_BD_2 = "localhost";
+const NAME_BD_2 = "nombre_de_la_base_de_datos";
+const USER_BD_2 = "sa";
+const PASSWORD_BD_2 = "";
+
+# ROUTE
+const SERVER = ("localhost");
+
+# Constantes de la APP
+const ALMACEN_PRINCIPAL = '01';
+
+

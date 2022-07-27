@@ -1,0 +1,181 @@
+
+<!-- MODAL CREAR O EDITAR CLIENTE -->
+<div class="modal fade"  id="clienteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="title_clienteModal">Agregar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- seleccionamos el activo a registrar -->
+                <label for="tipoid3">Seleccione el tipo de cliente</label>
+                <select class="form-control custom-select" id="tipoid3" name="tipoid3" style="width: 100%;" required>
+                    <option value="">Seleccione</option>
+                    <option value="0">Jurídico</option>
+                    <option value="1">Natural</option>
+                </select>
+
+
+                <form method="post" id="cliente_form">
+                    <input type="hidden" name="id_cliente" id="id_cliente"/>
+                    <input type="hidden" name="tipo_cliente" id="tipo_cliente"/>
+                    <br><hr />
+                    <h2 class="card-title">Datos Principales</h2> <br><br>
+
+                    <label for="codclie">Codigo del Cliente *</label>
+                    <input type="text" class="form-control input-sm" minlength="5" maxlength="15" id="codclie" name="codclie" placeholder="indique el RIF Ejemplo J311768773" data-inputmask='"mask": "A-9999999[9][-9]"' data-mask>
+                    <br />
+                    <div id="div_descrip"></div>
+
+                    <label for="id3">RIF *</label>
+                    <input type="text" class="form-control input-sm" minlength="5" maxlength="15" id="id3" name="id3" placeholder="RIF Ejemplo J311768773" data-inputmask='"mask": "A-9999999[9][-9]"' data-mask>
+                    <br />
+                    <label for="clase">Clase *</label>
+                    <select class="form-control custom-select" name="clase" id="clase" style="width: 100%;" required>
+                        <!-- la lista de ruta_al se carga por ajax -->
+                    </select>
+                    <br /><br />
+                    <br />
+                    <label for="represent">Representante *</label>
+                    <input type="text" class="form-control input-sm" minlength="3" maxlength="40" id="represent" name="represent" placeholder="representante" required>
+                    <br />
+                    <label for="direc1">Dirección 1 *</label>
+                    <input type="text" class="form-control input-sm" minlength="3" maxlength="60" id="direc1" name="direc1" placeholder="dirección 1" required>
+                    <br />
+                    <label for="direc2">Dirección 2</label>
+                    <input type="text" class="form-control input-sm" minlength="3" maxlength="60" id="direc2" name="direc2" placeholder="dirección 2">
+                    <br />
+                    <label for="estado">Estado</label>
+                    <select class="form-control custom-select" id="estado" name="estado" required>
+                        <!--los estados se llenan por ajax-->
+                    </select>
+                    <br /><br />
+                    <label for="ciudad">Ciudad *</label>
+                    <select class="form-control custom-select" id="ciudad" name="ciudad" style="width: 100%;" required>
+                        <!--los ciudad se llenan por ajax-->
+                    </select><br /><br />
+                    <label for="municipio">Municipio</label>
+                    <input type="text" class="form-control input-sm" minlength="3" maxlength="60" id="municipio" name="municipio" placeholder="municipio" required>
+                    <br />
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control input-sm" minlength="3" maxlength="60" id="email" name="email" placeholder="correo electrónico" data-inputmask="'alias': 'email'" data-mask>
+                    <br />
+                    <label for="telef">Teléfono Fijo*</label>
+                    <input type="tel" class="form-control input-sm" minlength="5" maxlength="30" id="telef" name="telef" placeholder="teléfono fijo"  data-inputmask='"mask": "9999-9999999"' data-mask>
+                    <br />
+                    <label for="movil">Teléfono Movil</label>
+                    <input type="tel" class="form-control input-sm" minlength="5" maxlength="15" id="movil" name="movil" placeholder="teléfono movil" data-inputmask='"mask": "9999-9999999"' data-mask>
+                    <br />
+                    <label for="activo">Estatus *</label>
+                    <select class="form-control custom-select" id="activo" name="activo" style="width: 100%;" required>
+                        <option value="">Seleccione</option>
+                        <option value="0">Inactivo</option>
+                        <option value="1">Activo</option>
+                    </select>
+                    <br /><br />
+                    <hr />
+                    <h2 class="card-title">Datos Adicionales</h2> <br><br>
+
+                    
+                    <label for="codzona">Zona</label>
+                    <select class="form-control custom-select" id="codzona" name="codzona" style="width: 100%;">
+                        <!--las zonas se cargan por ajax-->
+                    </select>
+                    <br /><br />
+                    <label for="codvend">Vendedor</label>
+                    <select class="form-control custom-select" id="codvend" name="codvend" style="width: 100%;">
+                        <!--los vendedores se cargan por ajax-->
+                    </select>
+                    <br /><br />
+                    <label for="ruta_al">Ruta Alternativa  </label>
+                    <select class="form-control custom-select" name="ruta_al" id="ruta_al" style="width: 100%;">
+                        <!-- la lista de ruta_al se carga por ajax -->
+                    </select>
+                    <br /><br />
+                    <label for="tipocli">Tipo Contribuyente *</label>
+                    <select class="form-control custom-select" id="tipocli" name="tipocli" style="width: 100%;" required>
+                        <option value="">Seleccione</option>
+                        <option value="0">Contribuyente</option>
+                        <option value="1">No contribuyente</option>
+                        <option value="2">Exportacion</option>
+                        <option value="3">Interno no gravable</option>
+                        <option value="4">Contribuyente especial</option>
+                    </select>
+                    <br /><br />
+                    <label for="tipopvp">Tipo Precio *</label>
+                    <select class="form-control custom-select" id="tipopvp" name="tipopvp" style="width: 100%;" required>
+                        <option value="">Seleccione</option>
+                        <option value="1">Precio 1</option>
+                        <option value="2">Precio 2</option>
+                        <option value="3">Precio 3</option>
+                    </select>
+                    <br /><br />
+                    <label for="diasvisita">Dia de Visita</label>
+                    <select class="form-control custom-select" id="diasvisita" name="diasvisita" style="width: 100%;">
+                        <option value="">Seleccione</option>
+                        <option value="lunes">LUNES</option>
+                        <option value="martes">MARTES</option>
+                        <option value="miercoles">MIERCOLES</option>
+                        <option value="jueves">JUEVES</option>
+                        <option value="viernes">VIERNES</option>
+                    </select>
+                    <br /><br />
+                    <div id="div_ruc"></div>
+
+                    <label for="latitud">Latitud</label>
+                    <input type="text" class="form-control input-sm" maxlength="20" id="latitud" name="latitud" placeholder="latitud">
+                    <br />
+                    <label for="longitud">Longintud</label>
+                    <input type="text" class="form-control input-sm" maxlength="20" id="longitud" name="longitud" placeholder="longitud">
+                    <br />
+                    <label for="codnestle">Codigo Nestle *</label>
+                    <select class="form-control custom-select" id="codnestle" name="codnestle" style="width: 100%;" required>
+                        <!--los codigo nestle se cargan por AJAX-->
+                    </select>
+                    <br /><br />
+                    <hr />
+                    <h2 class="card-title">Datos Financieros</h2> <br><br>
+
+                    <label for="escredito">Tiene Crédito</label>
+                    <select class="form-control custom-select" id="escredito" name="escredito" style="width: 100%;">
+                        <option value="">Seleccione</option>
+                        <option value="0">NO</option>
+                        <option value="1">SI</option>
+                    </select>
+                    <br /><br />
+                    <label for="LimiteCred">Limite de Crédito</label>
+                    <input type="text" class="form-control input-sm" value="0" maxlength="10" id="LimiteCred" name="LimiteCred" placeholder="limite de credito">
+                    <br />
+                    <label for="diascred">Dias de Credito</label>
+                    <input type="text" class="form-control input-sm" value="0" maxlength="3" id="diascred" name="diascred" placeholder="dias de credito">
+                    <br />
+                    <label for="estoleran">Tiene Tolerancia</label>
+                    <select class="form-control custom-select" id="estoleran" name="estoleran" style="width: 100%;">
+                        <option value="">Seleccione</option>
+                        <option value="0">NO</option>
+                        <option value="1">SI</option>
+                    </select>
+                    <br /><br />
+                    <label for="diasTole">Dias de Tolerancia</label>
+                    <input type="text" class="form-control input-sm" value="0" maxlength="3" id="diasTole" name="diasTole" placeholder="dias de tolerancia">
+                    <br />
+                    <label for="descto">Descuento %</label>
+                    <input type="text" class="form-control input-sm" value="0" maxlength="3" id="descto" name="descto" placeholder="porcentaje de descuento">
+                    <br />
+                    <label for="observa">Observación</label>
+                    <input type="text" class="form-control input-sm" maxlength="40" id="observa" name="observa" placeholder="observación">
+                    <br />
+                </form>
+
+                <div class="modal-footer">
+                    <button type="submit" name="action" id="btnGuardarUsuario" class="btn btn-success pull-left" value="Add">Guardar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

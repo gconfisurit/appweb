@@ -1,0 +1,183 @@
+
+
+<!-- MODAL  DETALLE DE LA RUTA -->
+<div class="modal fade"  id="kpimanagerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Ruta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="edv_form">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="supervisor">SUPERVISOR</label>
+                                <input type="text" class="form-control input-sm text-bold" maxlength="100" id="supervisor" name="supervisor" placeholder="Ingrese Supervisor">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="ruta">RUTA</label>
+                                <input type="text" class="form-control input-sm bg-gray-light" maxlength="20" id="ruta" name="ruta" placeholder="Ruta" readonly>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="objetivo_kpi">TIPO DE OBJETIVO EN KPI</label>
+                                <select class="form-control custom-select" name="objetivo_kpi" id="objetivo_kpi" style="width: 100%;">
+                                    <!-- la lista se carga por ajax -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="nombre">NOMBRE Y APELLIDO</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="nombre" name="nombre" placeholder="Ingrese nombre y apellido">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="obj_ventas_bul">OBJ. VENTAS (BULTOS)</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="obj_ventas_bul" name="obj_ventas_bul" placeholder="Ingrese objetivo ventas (bulto)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                       <!-- <div class="col-6">
+                            <div class="form-group">
+                                 <label for="cedula">CEDULA</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="cedula" name="cedula" placeholder="Ingrese cedula"> 
+                            </div>
+                        </div>-->
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="obj_ventas_und">OBJ. VENTAS (UNIDAD)</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="obj_ventas_und" name="obj_ventas_und" placeholder="Ingrese objetivo ventas (unidad)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="ubicacion">UBICACION</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="ubicacion" name="ubicacion" placeholder="Ingrese ubicacion">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="obj_ventas_kg">OBJ. VENTAS (KG)</label>
+                                <input type="text" class="form-control input-sm" maxlength="30" id="obj_ventas_kg" name="obj_ventas_kg" placeholder="Ingrese objetivo ventas (kg)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="clase">CLASE</label>
+                                <select class="form-control custom-select" name="clase" id="clase" style="width: 100%;">
+                                    <!-- la lista se carga por ajax -->
+                                </select>
+                            </div>
+                        </div>
+                        <!--<div class="col-6">
+                            <div class="form-group">
+                                <label for="obj_clientes_captar">OBJ. CLIENTES A CAPTAR</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="obj_clientes_captar" name="obj_clientes_captar" placeholder="Ingrese objetivo clientes a captar">
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="tiempo_est_despacho">TIEMPO EST. DESPAHO (DIAS)</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="tiempo_est_despacho" name="tiempo_est_despacho" placeholder="Ingrese tiempo estimado de despacho (dias)">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="obj_especial">OBJ. ESPECIAL</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="obj_especial" name="obj_especial" placeholder="Ingrese objetivo espacial">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="deposito">DEPOSITO</label>
+                                <input type="text" class="form-control input-sm bg-gray-light" maxlength="100" id="deposito" name="deposito" placeholder="Ingrese deposito" value="01" readonly>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="logro_obj_especial">LOGRO OBJ. ESPECIAL</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="logro_obj_especial" name="logro_obj_especial" placeholder="Ingrese logro objetivo espacial">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="frecuencia">FRECUENCIA</label>
+                                <select class="form-control custom-select" name="frecuencia" id="frecuencia" style="width: 100%;">
+                                    <option value="">SELECCIONE UNA OPCION</option>
+                                    <option value="1">Semanal</option>
+                                    <option value="2">Quincenal</option>
+                                    <option value="4">Mensual</option>
+                                </select>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="obj_ventas_divisas">OBJ. VENTAS ($$)</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </span>
+                                    </div>
+                                    <input type="text" class="form-control input-sm" maxlength="100" id="obj_ventas_divisas" name="obj_ventas_divisas" placeholder="Ingrese objetivo ventas Divisas">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="drop_size">DROP SIZE</label>
+                                <input type="text" class="form-control input-sm bg-gray-light" maxlength="100" id="drop_size" name="drop_size" placeholder="Ingrese objetivo drop size" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="obj_ava">OBJETIVO COLOCACION AVA</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="obj_ava" name="obj_ava" placeholder="Ingrese AVA">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="fotos_ava">OBJ. REGISTRO FOTOGRAFICO</label>
+                                <input type="text" class="form-control input-sm" maxlength="100" id="fotos_ava" name="fotos_ava" placeholder="Ingrese objetivo Fotos AVA">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" name="action" id="btnGuardar" class="btn btn-success pull-left" value="Add">Guardar</button>
+                        <button type="button" onclick="limpiar()" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

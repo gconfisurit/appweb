@@ -1,0 +1,40 @@
+
+<div class="modal fade"  id="listaClientesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Lista <span id="tipo_lista_clientes_title"></span> ( EDV: <strong id="descrip_lista_clientes_edv"></strong> )</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="relacion_lista_clientes">
+                    <div class="card-body" style="width:auto; overflow: hidden;">
+                        <table id="tabla_lista_clientes" class="table table-bordered table-striped text-center"  style="width:100%;">
+                            <thead style="background-color: #17A2B8;color: white;">
+                            <tr>
+                                <th class="text-center" title="Nombre">Nombre</th>
+                                <th class="text-center" title="Rif">Rif</th>
+                                <th class="text-center" title="Ubicación">Ubicación</th>
+                                <th class="text-center" title="Dia de visita">Dia de visita</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <!-- TD TABLA LLENAN POR AJAX -->
+                            </tbody>
+                            <tfoot style="background-color: #ccc;color: white;">
+                            <tr>
+                                <td class="text-center">Nombre</td>
+                                <td class="text-center">Rif</td>
+                                <td class="text-center">Ubicación</td>
+                                <td class="text-center">Dia de visita</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

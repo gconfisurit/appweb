@@ -1,0 +1,40 @@
+
+
+<div class="modal fade"  id="nuevoparametroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Parámetro a Módulo: &nbsp;<strong id="modulo_name_title"></strong></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="nuevoparametro_form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!-- text input -->
+                            <div class="form-group">
+                                <label for="nuevo_parametro">Nombre del parámetro</label>
+                                <input type="text" class="form-control input-sm" maxlength="20" id="nuevo_parametro" name="nuevo_parametro" placeholder="Nombre del parámetro" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="valor">Valor</label>
+                                <input type="text" class="form-control input-sm" maxlength="10" id="valor" name="valor" placeholder="Valor" required>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="modal-footer">
+                        <input type="hidden" name="name_modulo" id="name_modulo"/>
+                        <button type="submit" name="action" id="btnGuardarNuevoParametro" class="btn btn-success pull-left" value="Add">Guardar</button>
+                        <button type="button" onclick="limpiar_parametro()" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

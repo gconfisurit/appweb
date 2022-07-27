@@ -1,0 +1,41 @@
+<!-- MODAL  DETALLE DE FACTURA -->
+<div class="modal fade" id="detallefactura" role="dialog" style="z-index: 1600;">  
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Detalles de la Factura #: &nbsp;&nbsp; <span id="numero_factura"></span></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <strong>Razón Social:</strong>&nbsp;&nbsp; <span id="descrip_detfactura"></span><br/>
+                    <strong>Facturado Por:</strong>&nbsp;&nbsp; <span id="codusua_detfactura"></span><br/>
+                    <strong>Fecha de Emisión:</strong>&nbsp;&nbsp; <span id="fechae_detfactura"></span><?php /*echo date("d/m/Y h:iA", strtotime($j['fechae'])); */ ?>&nbsp; &nbsp;
+                    <strong>Ruta:</strong>&nbsp;&nbsp; <span id="codvend_detfactura"></span>
+                </p>
+                <div style="width:auto; overflow:scroll;">
+                    <table id="tabla_detalle_factura" class="table table-bordered table-striped table-sm text-center">
+                        <thead>
+                        <tr>
+                            <th class="small"><strong>Codigo</strong></th>
+                            <th class="small"><strong>Descripción</strong></th>
+                            <th class="small"><strong>Cantidad</strong></th>
+                            <th class="small"><strong>Unidad</strong></th>
+                            <th class="small"><strong>Precio</strong></th>
+                            <th class="small"><strong>Descuento</strong></th>
+                            <th class="small"><strong>Monto Bs</strong></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <!-- LOS DATOS SON CARGADOS AJAX -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="factura_despachada"></div>
+            </div>
+        </div>
+    </div>
+</div>

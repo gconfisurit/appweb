@@ -1,0 +1,43 @@
+
+<div class="modal fade"  id="recoverModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Recuperar Contraseña</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="errorRecover" class="alert alert-danger">
+          <span id="mensajeRecover"></span>
+        </div>
+        <form id="recover_form" method="post" autocomplete="off">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <span class="fas fa-user"></span>
+              </div>
+            </div>
+            <input id="email" name="email" type="text" class="form-control" autofocus=""  placeholder="nombre de usuario">
+          </div>
+
+          <div id="div_codigo" class="input-group mb-3"></div>
+
+          <div id="div_clave1" class="input-group mb-3"></div>
+
+          <div id="div_clave2" class="input-group mb-3"></div>
+
+          <div class="row">
+            <div class="col-5">
+              <button type="button" id="btnSend" onclick="clickBtnSend()" class="btn btn-primary btn-block">Enviar</button>
+              <button type="button" id="btnValidar" onclick="clickBtnValidar()" class="btn btn-primary btn-block">Validar</button>
+              <button type="button" id="btnGuardar" onclick="clickBtnGuardar()" class="btn btn-primary btn-block">Actualizar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

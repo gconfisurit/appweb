@@ -1,0 +1,60 @@
+
+<!-- MODAL PRINCIPAL DE EDITAR DESPACHOS -->
+<div class="modal fade"  id="editarDespachoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Despachos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="correlativo" name="correlativo" value="">
+
+                <!-- cabecera del despacho -->
+                <div id="detalle_en_editar_despacho" class="col ml-2">
+                    <p>
+                        <strong>Despacho nro: </strong>&nbsp;&nbsp; <span id="correl"></span><br>
+                        <strong>Destino: </strong>&nbsp;&nbsp; <span id="Destino"></span><br>
+                        <strong>Fecha Despacho: </strong>&nbsp;&nbsp; <span id="fechad"></span>
+                    </p>
+
+                    <p>
+                        <strong>Vehiculo: </strong>&nbsp;&nbsp; <span id="vehiculo"></span>
+                        <button id="modalMostrarEditarDespacho" type="button" class="btn btn-outline-primary btn-xs">Editar</button>
+                    </p>
+                    <p>
+                        <!-- <strong>Documentos: </strong>&nbsp;&nbsp; <span id="cantDocumentos"></span>-->
+                    </p>
+                </div>
+
+                <!-- documentos del despacho -->
+                <div id="relacion_despacho_editar" class="card-body" style="width:auto;">
+                    <table class="table table-bordered table-striped table-sm  text-center" style="width:100%;" id="tabla_editar_despacho">
+                        <thead>
+                            <tr>
+                                <th>Tipo Documento</th>
+                                <th>Nro Documento</th>
+                                <th>Cod Cliente</th>
+                                <th>Cliente</th>
+                                <th>Fecha Emisión</th>
+                                <th>Monto</th>
+                               <th>Acciones</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                </br>
+                <div class="modal-footer">
+                    <div class="col-md-12">
+                    <button class="btn btn-primary pull-left" id="buscarxfact_button"  onclick="modalAgregarDocumentoEnDespacho()" type="button">Agregar Documento</button>
+                    <button type="button" class="btn btn-danger float-right" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+
+<!-- MODAL DE BUSCAR FACTURA  -->
+<div class="modal fade"  id="buscarxfacturaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Buscar por Documento</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="nrodocumento">Nro de documento</label>
+                            <input type="text" class="form-control input-sm" maxlength="20" id="nrodocumento" name="nrodocumento" placeholder="Ingrese numero de documento" required >
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" id="tipo_fact_modal" name="tipo_doc_modal" value="f" checked>
+                                <label for="tipo_fact_modal" class="custom-control-label">Factura</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input class="custom-control-input" type="radio" id="tipo_not_modal" name="tipo_doc_modal" value="n">
+                                <label for="tipo_not_modal" class="custom-control-label">Nota de Entrega</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="detalle_despacho"></div>
+                <div id="detalle_despacho_liquidacion" class="col text-center"></div>
+
+                <div class="col text-center">
+
+                    <div class="modal-footer">
+                        <button type="button" onclick="limpiar_campo_documento_modal()" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                        <button type="button" name="action" id="btnBuscarDocModal" class="btn btn-success pull-right" value="Add">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

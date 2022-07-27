@@ -1,0 +1,36 @@
+
+<!-- Modal crear o editar -->
+<div class="modal fade" id="choferModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Choferes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="chofer_form">
+                    <label>Cedula de Identidad</label>
+                    <input type="number" class="form-control input-sm" maxlength="9" id="cedula" name="cedula" placeholder="Ingrese Cedula de Identidad" required>
+                    <br />
+                    <label>Nombre y Apellido</label>
+                    <input type="text" class="form-control input-sm" maxlength="100" id="nomper" name="nomper" placeholder="Ingrese nombre y apellido" required>
+                    <br />
+                    <label>Estado</label>
+                    <select class="form-control custom-select" id="estado" name="estado" required>
+                        <option value="">Seleccione un Estado</option>
+                        <option value="0">Inactivo</option>
+                        <option value="1">Activo</option>
+                    </select>
+                    <br />
+                    <div class="modal-footer">
+                        <button type="submit" name="action" id="btnGuardar" class="btn btn-success pull-left" value="Add">Guardar</button>
+                        <button type="button" onclick="limpiar()" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

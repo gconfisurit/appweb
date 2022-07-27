@@ -1,0 +1,23 @@
+<?php
+include_once 'Almacen.php';
+include_once 'Auditoria.php';
+include_once 'CausasRechazos.php';
+include_once 'Choferes.php';
+include_once 'Cobranzas.php';
+include_once 'Empresa.php';
+include_once 'Factura.php';
+include_once 'Instancias.php';
+include_once 'KpiLogro.php';
+include_once 'KpiMarcas.php';
+include_once 'Marcas.php';
+include_once 'Menu.php';
+include_once 'Modulos.php';
+include_once 'NotasDeEntrega.php';
+include_once 'Permisos.php';
+include_once 'RecoverUser.php';
+include_once 'Rol.php';
+include_once 'Usuarios.php';
+include_once 'Vehiculo.php';
+include_once 'Vendedores.php';
+include_once 'Proveedores.php';
+include_once 'VentasKg.php';

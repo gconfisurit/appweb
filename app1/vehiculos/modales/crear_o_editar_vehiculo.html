@@ -1,0 +1,53 @@
+
+
+<div class="modal fade"  id="vehiculoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Vehiculo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="vehiculo_form">
+                    <label for="placa">Placa</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control input-sm" maxlength="10" id="placa" name="placa" placeholder="Ingrese placa" required >
+                    </div>
+                    <label for="modelo">Modelo</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control input-sm" maxlength="50" id="modelo" name="modelo" placeholder="Ingrese modelo">
+                    </div>
+                    <label for="capacidad">Capacidad</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control input-sm" maxlength="4" id="capacidad" name="capacidad" placeholder="Ingrese capacidad">
+                        <div class="input-group-append">
+                            <span class="input-group-text">Kg</span>
+                        </div>
+                    </div>
+                    <label for="volumen">Volumen</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control input-sm" maxlength="10" id="volumen" name="volumen" placeholder="Ingrese volumen">
+                        <div class="input-group-append">
+                            <span class="input-group-text">Cm3</span>
+                        </div>
+                    </div>
+                    <!--<label for="estado">Estado</label>
+                    <select class="form-control custom-select" id="estado" name="estado">
+                        <option value="">Seleccione un Estado</option>
+                        <option value="0">Inactivo</option>
+                        <option value="1">Activo</option>
+                    </select>-->
+                    <br />
+                    <div class="modal-footer">
+                        <input type="hidden" name="id_vehiculo" id="id_vehiculo"/>
+                        <button type="submit" name="action" id="btnGuardar" class="btn btn-success pull-left" value="Add">Guardar</button>
+                        <button type="button" onclick="limpiar()" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+
+
+<div class="modal fade"  id="usuarioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="usuario_form">
+                    <label for="cedula">Cedula de Identidad</label>
+                    <input type="text" class="form-control input-sm" maxlength="20" id="cedula" name="cedula" placeholder="Ingrese Cedula de Identidad" required >
+                    <br />
+                    <label for="login">Nombre de Usuario</label>
+                    <input type="text" class="form-control input-sm" maxlength="30" id="login" name="login" placeholder="Ingrese nombre de usuario" >
+                    <br />
+                    <label for="nomper">Nombre y Apellido</label>
+                    <input type="text" class="form-control input-sm" maxlength="100" id="nomper" name="nomper" placeholder="Ingrese nombre y apellido">
+                    <br />
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" class="form-control input-sm" maxlength="100" id="email" name="email" placeholder="Ingrese correo electronico">
+                    <br />
+                    <label for="clave">Contraseña</label>
+                    <input type="password" class="form-control input-sm" minlength="6" maxlength="20" id="clave" name="clave" placeholder="Ingrese contraseña">
+                    <br />
+                    <label for="rol">Rol de Usuario</label>
+                    <select class="form-control custom-select" name="rol" id="rol" style="width: 100%;" required>
+                        <!-- la lista de roles se carga por ajax -->
+                    </select>
+                    <br />
+                    <label for="estado">Estado</label>
+                    <select class="form-control custom-select" id="estado" name="estado">
+                        <option value="">Seleccione un Estado</option>
+                        <option value="0">Inactivo</option>
+                        <option value="1" selected>Activo</option>
+                    </select>
+                    <br />
+                    <div class="modal-footer">
+                        <input type="hidden" name="id_usuario" id="id_usuario"/>
+                        <button type="submit" name="action" id="btnGuardar" class="btn btn-success pull-left" value="Add">Guardar</button>
+                        <button type="button" onclick="limpiar()" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i> Cerrar</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
